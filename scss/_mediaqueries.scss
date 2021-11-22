@@ -1,0 +1,293 @@
+$ancho:1500px;
+@mixin sizes($width,$height) {
+    height: $height;
+    width: $width;
+}
+@mixin margins($margin,$padding) {
+    padding: $padding;
+    margin: $margin;
+}
+@mixin fonts($fontsize,$fontweight) {
+    font-size: $fontsize;
+    font-weight: $fontweight;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media only screen and (max-width: 540px) {
+    header{
+        width: auto;
+        h1{
+            color: $bg_letras;
+            font-size: 20px;
+        }
+        h2{
+            color: $bg_letras;
+            font-size: 20px;
+        }
+    }
+    main{
+        section{
+            h3{
+                @include margins(10px,auto);
+                @include fonts(20px,normal);
+                color: $bg_letras;
+                text-align: center; 
+            }
+            p{
+                @include margins(15px,auto);
+                @include fonts(15px,bold);
+                color: $bg_letras;
+                word-spacing: 10px;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                text-align: justify;
+            }
+        }
+        .Planes{
+            h2{
+                @include margins(11px,auto);
+                @include fonts(20px,bold);
+                color: $bg_letras;
+                font-style: italic;
+                text-align: center; 
+            }
+        }
+        .table-responsive{
+                @include fonts(10px,normal);
+        }
+        .seccionesDeDescripcion{
+            @include margins(10px auto,auto);
+            width: (90%);
+            border: 2px solid navy;
+            outline: 4px solid $bg_letrasClaras;
+        }
+        .servicios{
+            ul{
+                @include margins(15px,auto);
+                @include fonts(15px,bold);
+                list-style-type: square;
+                list-style-position: inside;
+                color: $bg_letras;
+                line-height: 1.5;
+            }       
+        }
+        .containerNovedades{
+            h4{
+                @include margins(10px,auto);
+                @include fonts(18px,normal);
+            }
+        }
+        .videoDelimitador{
+            @include margins(auto,2rem);
+            background-color: $bg_letrasClaras;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            .videoContenedor{
+            iframe{
+                @include sizes(278px,156px);
+            }
+            }
+        } 
+        .form{
+            @include margins(5px,auto);
+            color: $bg_letras;
+            font-weight: bold;
+            }    
+    }
+}  
+@media only screen and (min-width: 540px) {
+    header{
+        width: auto;
+        h1{
+            color: $bg_letras;
+            font-size: 28px;
+        }
+        h2{
+            color: $bg_letras;
+            font-size: 28px;
+        }
+    }
+    main{
+        section{
+            h3{
+                @include margins(10px,auto);
+                @include fonts(25px,normal);
+                color: $bg_letras;
+                text-align: center;
+            }
+            p{
+                @include margins(15px,auto);
+                @include fonts(17px,bold);
+                color: $bg_letras;
+                word-spacing: 10px;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                text-align: justify;
+            }
+        }
+        .Planes{
+            h2{
+                @include margins(10px,auto);
+                @include fonts(32px,bold);
+                color: $bg_letras;
+                font-style: italic;
+                text-align: center; 
+            }
+        }
+        .seccionesDeDescripcion{
+            @include margins(10px auto,auto);
+            width: (90%);
+            border: 2px solid navy;
+            outline: 4px solid $bg_letrasClaras;
+        }
+        .servicios{
+            ul{
+                @include margins(30px,10px);
+                @include fonts(15px,bold);
+                list-style-type: square;
+                list-style-position: inside;
+                color: $bg_letras;
+                line-height: 1.5;
+            }       
+        }
+    } 
+}   
+@media only screen and (min-width: 768px) {
+    header{
+        h1{
+            color: $bg_letras;
+            font-size: 36px;
+        }
+        h2{
+            color: $bg_letras;
+            font-size: 36px;
+        }
+    }
+    main{
+        section{
+            h3{
+                @include margins(10px,auto);
+                @include fonts(36px,normal);
+                color: $bg_letras;
+                text-align: center;
+            }
+            p{
+                @include margins(15px,auto);
+                @include fonts(20px,bold);
+                color: $bg_letras;
+                word-spacing: 10px;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                text-align: justify;
+            }
+        }
+        .Planes{
+            h2{
+                @include margins(10px,auto);
+                @include fonts(32px,bold);
+                color: $bg_letras;
+                font-style: italic;
+                text-align: center; 
+                }
+        }
+        .seccionesDeDescripcion{
+            @include margins(40px auto,20px);
+            width: (90%);
+            border: 2px solid navy;
+            outline: 4px solid $bg_letrasClaras;
+        }
+        .servicios{
+            ul{
+                @include margins(30px,10px);
+                @include fonts(20px,bold);
+                list-style-type: square;
+                list-style-position: inside;
+                color: $bg_letras;
+                line-height: 1.5;
+            }       
+        }
+        .contenedor{
+            @include margins(10px auto,2rem);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }   
+    }      
+}
+@media only screen and (min-width: 1024px) {
+    header{
+        h1{
+            color: $bg_letras;
+            font-size: 46px;
+        }
+        h2{
+            color: $bg_letras;
+            font-size: 46px;
+        }
+    }
+    main{
+        section{
+            h3{
+                @include margins(10px,auto);
+                @include fonts(46px,normal);
+                color: $bg_letras;
+                text-align: center;
+            }
+            p{
+                @include margins(15px,auto);
+                @include fonts(25px,bold);
+                color: $bg_letras;
+                word-spacing: 10px;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                text-align: justify;
+            }
+        }
+        .Planes{
+            h2{
+                @include margins(10px,auto);
+                @include fonts(xxx-large,bold);
+                color: $bg_letras;
+                font-style: italic;
+                text-align: center; 
+                }
+        }
+        .seccionesDeDescripcion{
+            @include margins(40px auto,20px);
+            width: (90%);
+            border: 2px solid navy;
+            outline: 4px solid $bg_letrasClaras;
+        }
+        .servicios{
+            ul{
+                @include margins(30px,10px);
+                @include fonts(25px,bold);
+                list-style-type: square;
+                list-style-position: inside;
+                color: $bg_letras;
+                line-height: 1.5;
+            }       
+        }              
+    
+        .containerNovedades{
+            h4{
+                @include margins(10px,auto);
+                @include fonts(25px,normal);
+                color: $bg_letras;
+                text-align: center; 
+            }
+            p{
+                @include margins(15px,auto);
+                @include fonts(15px,normal);
+                color: $bg_letras;
+                word-spacing: 5px;
+                letter-spacing: 0.5px;
+                line-height: 1.5;
+                text-align: justify;
+            }
+        }           
+    }
+}
